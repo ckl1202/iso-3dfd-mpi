@@ -1,0 +1,34 @@
+cd src; \
+	make CC=icc iso-3dfd_main.o
+/bin/sh: line 0: cd: src: No such file or directory
+make[1]: Entering directory `/home/zycao/cpu/iso-3dfd/src'
+icc -g -restrict -DCPU -no-ip -ansi-alias -fno-alias -c -o iso-3dfd_main.o iso-3dfd_main.cc
+icc -g -restrict -DCPU -no-ip -ansi-alias -fno-alias -c -o iso-3dfd_main.o iso-3dfd_main.cc
+iso-3dfd_main.cc(99): error: identifier "prev_base" is undefined
+    if( prev_base==NULL || next_base==NULL || vel_base==NULL ){
+        ^
+
+iso-3dfd_main.cc(99): error: identifier "next_base" is undefined
+    if( prev_base==NULL || next_base==NULL || vel_base==NULL ){
+                           ^
+
+iso-3dfd_main.cc(99): error: identifier "vel_base" is undefined
+    if( prev_base==NULL || next_base==NULL || vel_base==NULL ){
+                                              ^
+
+iso-3dfd_main.cc(111): error #165: too few arguments in function call
+    iso_3dfd(next, prev, vel, coeff, n1, n2, n3, tmp_nreps);
+                                                          ^
+
+iso-3dfd_main.cc(121): error #165: too few arguments in function call
+    iso_3dfd(next, prev, vel, coeff, n1, n2, n3, nreps);
+                                                      ^
+
+iso-3dfd_main.cc(150): error #165: too few arguments in function call
+    iso_3dfd(next, prev, vel, coeff, n1, n2, n3, nreps);
+                                                      ^
+
+compilation aborted for iso-3dfd_main.cc (code 2)
+make[1]: *** [iso-3dfd_main.o] Error 2
+make[1]: Leaving directory `/home/zycao/cpu/iso-3dfd/src'
+make: *** [src/iso-3dfd_main.o] Error 2
